@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block containt %}
+<!-- <div class="container-fluid row">
+    {% for book in books %}
+    <div class="row g-0 m-3 mx-auto" style="width: 20rem;">
+      <img src="{{book.book_img.url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{book.book_name}} {{book.book_img.url}}</h5>
+        <p class="card-text"> example text </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Book Name :&nbsp;{{book.author_name}}</li>
+        <li class="list-group-item">Publisher :&nbsp;{{book.publisher}}</li>
+        <li class="list-group-item">Viewa :&nbsp;{{book.views}}</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    {% endfor %}
+</div> -->
+
+<div class="container-fluid p-0">
+    <div class="row g-0">
+      {% for book in books %} 
+      <div class="card mx-auto" style="width: 20rem;">
+          <img src="{{book.book_img.url}}" class="card-img-top" alt="..." style="height: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{book.book_name}}</h5>
+            <p class="card-text">&nbsp;{{book.views}} Views</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author Name <b> :&nbsp;{{book.author_name}}</b></li>
+            <li class="list-group-item">Publisher :&nbsp;{{book.publisher}}</li>
+          </ul>
+      </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}

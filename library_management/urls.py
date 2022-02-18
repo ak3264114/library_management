@@ -12,5 +12,5 @@ urlpatterns = [
     path("logout/", views.logout, name="logout"),
     path("details/", views.details, name="details"),
     path('books/', views.books , name='books'),
-    path("add_book", views.add_book, name="add_book"),
+    path("add_book/", views.add_book, name="add_book"),
 ]

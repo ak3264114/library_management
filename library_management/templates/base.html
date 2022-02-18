@@ -19,7 +19,7 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/books">Books</a>
+              <a class="nav-link active" aria-current="page" href="/books/">Books</a>
             </li>
           </ul>
         </div>
@@ -27,20 +27,20 @@
           <ul class="navbar-nav " style="margin-left: auto;" >
           {% if user.is_authenticated is False%}
             <li class="nav-item">
-              <a class="nav-link" href="/signin">Sign in</a>
+              <a class="nav-link" href="/signin/">Sign in</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/sinup">Sinup</a>
+              <a class="nav-link" href="/sinup/">Sinup</a>
             </li>
             {% endif %}
             {% if user.is_authenticated%}
             <li class="nav-item">
-              <a class="nav-link" href="/logout">Loguot</a>
+              <a class="nav-link" href="/logout/">Loguot</a>
             </li>
             {% endif %}
             {% if user.is_staff %}
             <li class="nav-item">
-              <a class="nav-link" href="/add_book">Add Book</a>
+              <a class="nav-link" href="/add_book/">Add Book</a>
             </li>
             {% endif %}
           </ul>
